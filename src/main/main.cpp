@@ -2,25 +2,23 @@
 #include <iostream>
 #include <vector>
 #include <list>
+#include <stack>
 #include <numeric>
 #include <functional>
+#include <mutex>
+#include <atomic>
+#include <thread>
+#include <memory>
 #include "mlib.h"
+#include "omp.h"
 
 
-int main(){
-    vector<int> A(3);
-    
 
-    // A.push_back(tp());
-    A.push_back(11);
-
-    for(int i = 0; i < A.size(); ++i)
-        std::cout << A[i] << " ";
-
-    for(auto c : A)
-        std::cout << c << " ";
-
-    std::cout << "\n" << A.size() << " " << A.capacity() <<  "\n";
-    return 0;
+int main()
+{
+  cc::RB_tree<int, tp> a;
+  a.push(10, tp());
+  a.get_value(10);
+  std::cout << "Hello world!\n";
+  return 0;
 }
-
